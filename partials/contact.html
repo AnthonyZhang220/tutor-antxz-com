@@ -1,0 +1,49 @@
+<section class="contact" id="contact">
+  <div class="container contact-wrap reveal">
+    <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+    <p class="contact-sub" data-i18n="contact.sub">Ready to start? Fill in the form below and I'll get back to you within 24 hours.</p>
+
+    <form class="contact-form" id="contact-form" data-endpoint="/api/contact" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name" data-i18n="contact.form.name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Your name" />
+        </div>
+        <div class="form-group">
+          <label for="email" data-i18n="contact.form.email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="you@example.com" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="subject" data-i18n="contact.form.subject">Subject</label>
+        <select id="subject" name="subject" required>
+          <option value="" data-i18n="contact.form.subjectDefault">Select a subject…</option>
+          <option value="chinese-1" data-i18n="contact.form.subjectChinese1">Mandarin Chinese 1 (Beginner)</option>
+          <option value="chinese-2" data-i18n="contact.form.subjectChinese2">Mandarin Chinese 2 (Elementary)</option>
+          <option value="chinese-3-4" data-i18n="contact.form.subjectChinese34">Mandarin Chinese 3-4 (Intermediate)</option>
+          <option value="ap-chinese" data-i18n="contact.form.subjectAP">AP Chinese Prep</option>
+          <option value="hsk" data-i18n="contact.form.subjectHSK">HSK Prep (Level 1-6)</option>
+          <option value="math-elementary" data-i18n="contact.form.subjectMathElem">Math - Elementary</option>
+          <option value="math-middle" data-i18n="contact.form.subjectMathMiddle">Math - Middle School</option>
+          <option value="math-high" data-i18n="contact.form.subjectMathHigh">Math - High School</option>
+          <option value="placement" data-i18n="contact.form.subjectPlacement">Not sure yet - help me pick a level</option>
+          <option value="other" data-i18n="contact.form.subjectOther">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message" data-i18n="contact.form.message">Message</label>
+        <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Tell me a bit about what you're looking for…"></textarea>
+      </div>
+
+      <div class="form-honeypot" aria-hidden="true">
+        <label for="website">Website</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <button type="submit" class="btn btn-primary" id="contact-submit" data-i18n="contact.form.submit">Send Message</button>
+      <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
